@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "titolo": "Olimpiadi di Informatica (OII)",
+        "descrizione": "Competizione individuale focalizzata su algoritmi.",
+        "data": "Dicembre 2025",
+        "link": "https://www.olimpiadi-informatica.it/"
+    },
+    {
+        "id": 2,
+        "titolo": "CyberChallenge.it",
+        "descrizione": "Programma di addestramento in cybersecurity.",
+        "data": "Febbraio 2026",
+        "link": "https://cyberchallenge.it/"
+    }
+]
