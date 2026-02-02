@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ITT Giorgi – Dipartimento Informatica</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="logo">
+            <span class="logo-circle">G</span>
+            <span>ITT Giorgi - Dipartimento Informatica</span>
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#" class="active">Progetti</a>
+            <a href="#">Competizioni</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- INTRODUZIONE -->
+        <h1>Progetti degli studenti</h1>
+        <p>
+            In questa sezione sono raccolti alcuni dei progetti realizzati dagli studenti del nostro istituto nel
+            corso
+            dell’anno scolastico.
+            I lavori spaziano dalla programmazione di applicazioni e siti web, allo sviluppo di videogiochi e
+            simulazioni, mostrando creatività, competenze tecniche e capacità di lavoro di squadra.
+        </p>
+
+        <hr>
+
+        <!-- Contest UNICAM -->
+
+        <h2>Contest “Informatica × Gioco = Fantasia + Regole”</h2>
+        <p>
+            La Sezione di Informatica dell’Università di Camerino, in collaborazione con IVIPRO, organizza un
+            contest
+            rivolto a studenti delle scuole superiori per la realizzazione di videogiochi. L’iniziativa promuove
+            competenze di programmazione, game design e lavoro di gruppo, incoraggiando creatività e rigore.
+        </p>
+        <p>
+            Gli studenti hanno realizzato i giochi utilizzando <strong>Unity</strong>, una piattaforma di sviluppo
+            professionale. Il processo di lavoro ha incluso diverse fasi:
+            dalla progettazione iniziale, alla definizione delle regole di gioco, alla creazione di grafica e suoni,
+            fino alla programmazione delle meccaniche e dei livelli.
+        </p>
+        <p>
+            Ogni gruppo ha redatto un <strong>Game Design Document (GDD)</strong>, un documento tecnico che descrive
+            la
+            struttura del gioco, le modalità di interazione, gli obiettivi e i dettagli grafici e sonori. Questo ha
+            permesso agli studenti di organizzare il lavoro in maniera sistematica e collaborativa.
+        </p>
+        <p>
+            Durante lo sviluppo, gli studenti hanno ricevuto <strong>supporto da tutor</strong> e hanno potuto
+            seguire sessioni di formazione sulle tematiche del contest e sulle funzionalità di Unity. I progetti
+            sono stati testati e rifiniti più volte per garantire correttezza, divertimento e attinenza alla
+            tematica scelta.
+        </p>
+        <p>
+            I progetti migliori sono stati premiati con riconoscimenti e attestati, evidenziando le capacità
+            tecniche e creative degli studenti.
+        </p>
+        <p>
+            <a href="https://computerscience.unicam.it/informatica-gioco-fantasia-regole" target="_blank">
+                Maggiori informazioni sul contest
+            </a>
+        </p>
+
+
+        <!-- GIOCO 1 -->
+
+        <article class="card">
+            <div class="text">
+                <h2>The Mortal Eclipse: The Last Hope</h2>
+                <p>
+                    In un futuro post-apocalittico, la terra è stata devastata da una malattia sconosciuta. La vita
+                    come
+                    la conosciamo è scomparsa,
+                    lasciando dietro di sé solo rovine e disperazione. Astra è una donna di grande intelligenza e
+                    determinazione e sa che la salvezza dell’umanità dipende da lei. Ogni giorno, si avventura fuori
+                    dalla sicurezza della città sotterranea, affrontando i pericoli del mondo post-apocalittico,
+                    nella
+                    speranza di trovare la cura.
+                </p>
+            </div>
+            <div class="image">
+                <img class="photo" src="{{ url_for('static', filename='images/mortalEclipse.png') }}"
+                    alt="Mortal Eclipse">
+
+                <span class="credits">Crediti: Matthias Livera, Luigi Sgura, Simone Giove, Brian Romano <br> 3^DI
+                    (A.S
+                    23/24)</span>
+
+                <!-- METTERE IL LINK DEL GIOCO -->
+                <!-- QUI -->
+
+            </div>
+        </article>
+
+        <!-- GIOCO 2 -->
+
+        <article class="card">
+            <div class="text">
+                <h2>Titolo</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum mauris eros.
+                    Morbi aliquam egestas leo. Proin vitae nulla eu metus condimentum rhoncus.
+                    Praesent hendrerit turpis a odio commodo, eu tincidunt massa molestie.
+                    Quisque aliquet, lectus non tristique lacinia, arcu massa faucibus libero,
+                    nec mattis libero quam non dui.
+                </p>
+            </div>
+            <div class="image">
+                <img class="photo" src="{{ url_for('static', filename='images/aiRedemption.png') }}"
+                    alt="AI Redemption">
+
+                <span class="credits">Crediti: Francesco Ciccarese, Lorenzo Lega, Lorenzo Mangia, Marco Marasco <br>
+                    3^DI
+                    (A.S
+                    23/24)</span>
+            </div>
+        </article>
+        <hr>
+        <h2>Sito capture the flag (CTF)</h2>
+        <p>
+            GiorgiCTF è un sito progettato e sviluppato dagli studenti per mettere alla prova le competenze di
+            sicurezza informatica attraverso sfide in stile Capture The Flag (CTF).
+            Gli utenti possono affrontare problemi di crittografia, analisi del codice, sicurezza web e reverse
+            engineering, migliorando abilità tecniche e pensiero logico in un ambiente stimolante e pratico.
+        </p>
+        <article class="card">
+            <div class="text">
+                <h2>GiorgiCTF</h2>
+                <p>
+                    Il sito è stato interamente progettato dagli studenti della classe 5DI sotto la guida del Prof.
+                    Colazzo.
+                    Il lavoro ha incluso la definizione della struttura, la progettazione grafica, lo sviluppo delle
+                    funzionalità e il testing del sito.
+                    Una volta completato, GiorgiCTF è stato utilizzato durante i laboratori aperti e gli Open Day della
+                    scuola, permettendo a visitatori e studenti di sperimentare le sfide e approfondire le competenze in
+                    sicurezza informatica.
+                </p>
+                <a href="https://giorgictf.it">Clicca qui per visualizzare il sito!</a>
+            </div>
+            <div class="image">
+                <img class="photo" src="{{ url_for('static', filename='images/giorgiCTF.png') }}" alt="Mortal Eclipse">
+
+                <span class="credits">Crediti: Samuel Luggeri, Simone Giove, Lorenzo Lega, Lorenzo Mangia, Marco Marasco
+                    <br> 5^DI (A.S 25/26)
+                </span>
+
+                <!-- METTERE IL LINK DEL GIOCO -->
+                <!-- QUI -->
+
+            </div>
+        </article>
+
+    </main>
+
+
+
+
+
+</body>
+
+</html>

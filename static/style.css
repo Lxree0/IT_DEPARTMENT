@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700;900&display=swap');
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Titillium Web", sans-serif;
+}
+
+
+body {
+    background: #f2f2f0;
+    color: #111;
+}
+
+.topbar {
+    height: 130px;
+    background: #1f7db7;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    font-size: 32px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+}
+
+.logo-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #fff;
+    color: #1f7db7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 24px;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+nav a.active {
+    text-decoration: underline;
+}
+
+
+.container {
+    max-width: 1100px;
+    margin: 48px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.container>p {
+    font-size: 20px;
+}
+
+
+.card {
+    background: #e5e5e5;
+    border-radius: 24px;
+    font-size: 20px;
+    padding: 32px;
+    display: flex;
+    gap: 32px;
+}
+
+.card h2 {
+    margin-bottom: 12px;
+
+}
+
+.card p {
+    line-height: 1.5;
+}
+
+.image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.photo {
+    width: 350px;
+    height: 250px;
+    background: #9c3b3b;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    border-radius: 10px;
+}
+
+.credits {
+    margin-top: 8px;
+    font-size: 12px;
+}
+
+
+br {
+    display: block;
+    margin-bottom: 100px;
+}
