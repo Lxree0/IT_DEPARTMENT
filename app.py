@@ -1,6 +1,13 @@
-from flask import Flask,render_template
+import json
+from flask import Flask,render_template, abort
 
 app = Flask(__name__)
+def carica_dati():
+    try:
+        with open('competizioni.json', 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return []
 
 @app.route("/")
 def home():
@@ -10,9 +17,20 @@ def home():
 def progetti():
     return render_template("progetti.html")
 
-@app.route("/competizioni")
+@app.route('/competizioni')
 def competizioni():
-    return render_template("competizioni.html")
+    competizioni = carica_dati()
+    return render_template('competizioni.html', competizioni=competizioni)
+
+@app.route('/competizione/<int:comp_id>')
+def dettaglio(comp_id):
+    competizioni = carica_dati()
+    gara = next((item for item in competizioni if item["id"] == comp_id), None)
+    
+    if gara is None:
+        abort(404)
+        
+    return render_template('dettaglio_comp.html', gara=gara)
 
 @app.route("/contatti")
 def contatti():
