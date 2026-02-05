@@ -33,17 +33,32 @@ body {
 }
 
 .logo-circle {
-    width: 32px;
-    height: 32px;
+    width: 60px;  /* Aumentato un po' per rendere il logo leggibile */
+    height: 60px;
     border-radius: 50%;
     background: #fff;
-    color: #1f7db7;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: bold;
+    overflow: hidden; /* Fondamentale: taglia l'immagine se esce dal cerchio */
+    border: 2px solid #fff; /* Un piccolo bordo per staccare dal blu */
+    flex-shrink: 0; /* Impedisce al cerchio di schiacciarsi */
+}
+.logo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Mantiene le proporzioni del logo senza tagliarlo */
+    padding: 2px; /* Opzionale: dà un po' di respiro tra logo e bordo bianco */
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 700;
+    text-transform: uppercase; /* Rende il nome dell'istituto più autorevole */
+    letter-spacing: 1px;
+}
 nav a {
     color: #fff;
     text-decoration: none;
@@ -116,4 +131,23 @@ nav a.active {
 br {
     display: block;
     margin-bottom: 100px;
+}
+
+.topbar {
+    height: 100px; /* Ridotto leggermente (130px era molto alto) */
+    background: #1f7db7;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Aggiunge profondità */
+}
+
+/* Rendi il titolo H1 più elegante */
+h1 {
+    color: #1f7db7;
+    font-weight: 900;
+    margin-bottom: 10px;
+    font-size: 42px;
 }
