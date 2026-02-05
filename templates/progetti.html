@@ -9,15 +9,17 @@
 
 <body>
 
-    <header class="topbar">
+  <header class="topbar">
         <div class="logo">
-            <span class="logo-circle">G</span>
-            <span>ITT Giorgi - Dipartimento Informatica</span>
+            <div class="logo-circle">
+                <img src="{{ url_for('static', filename='images/logo_giorgi.png') }}" alt="Logo ITT Giorgi">
+            </div>
+            <span>ISTITUTO TECNICO TECNOLOGICO G. GIORGI</span>
         </div>
         <nav>
-            <a href="#">Home</a>
-            <a href="#" class="active">Progetti</a>
-            <a href="#">Competizioni</a>
+            <a href="{{url_for('home')}}">Home</a>
+            <a href="{{url_for('progetti')}}" class="active">Progetti</a>
+            <a href="{{url_for('contatti')}}">Contatti</a>
         </nav>
     </header>
 

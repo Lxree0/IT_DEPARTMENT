@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatti - IT Department</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="logo">
+            <div class="logo-circle">
+                <img src="{{ url_for('static', filename='images/logo_giorgi.png') }}" alt="Logo ITT Giorgi">
+            </div>
+            <span>ISTITUTO TECNICO TECNOLOGICO G. GIORGI</span>
+        </div>
+        <nav>
+            <a href="{{url_for('home')}}">Home</a>
+            <a href="{{url_for('progetti')}}">Progetti</a>
+            <a href="{{url_for('contatti')}}" class="active">Contatti</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="contatti-sezione">
+            <h1>Contatti</h1>
+
+            <div class="contatti-grid">
+                <div class="contatto-card">
+                    <h3>Email</h3>
+                    <p><a href="mailto:info@itdepartment.com">info@itdepartment.com</a></p>
+                </div>
+
+                <div class="contatto-card">
+                    <h3>Telefono</h3>
+                    <p><a href="tel:+390123456789">+39 0123 456 789</a></p>
+                </div>
+
+                <div class="contatto-card">
+                    <h3>Indirizzo</h3>
+                    <p>Via Tecnologia 42<br>
+                        00100 Roma (RM)<br>
+                        Italia</p>
+                </div>
+            </div>
+
+            <div class="mappa-container">
+                <h2>Dove Trovarci</h2>
+                <div class="mappa-wrapper">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3027.313793935791!2d17.935881100000003!3d40.6450128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13467a16874f3d3b%3A0xa1599b90d596f97!2sIstituto%20Tecnico%20Tecnologico%20%22G.%20Giorgi%22!5e0!3m2!1sit!2sit!4v1770323944341!5m2!1sit!2sit"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 IT Department. Tutti i diritti riservati.</p>
+    </footer>
+
+</body>
+
+</html>

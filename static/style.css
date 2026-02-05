@@ -151,3 +151,152 @@ h1 {
     margin-bottom: 10px;
     font-size: 42px;
 }
+
+/* --- Layout Generale --- */
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h1 {
+    color: #1f7db7;
+    font-weight: 900;
+    font-size: 42px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* --- Griglia Contatti --- */
+.contatti-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.contatto-card {
+    background: #ffffff; /* Bianco per contrasto */
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+    border-bottom: 4px solid #1f7db7; /* Richiamo al colore principale */
+}
+
+.contatto-card:hover {
+    transform: translateY(-5px);
+}
+
+.contatto-card h3 {
+    color: #1f7db7;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.contatto-card p, .contatto-card a {
+    color: #444;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* --- Sezione Mappa --- */
+.mappa-container {
+    margin-top: 50px;
+}
+
+.mappa-container h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333;
+}
+
+.mappa-container iframe {
+    width: 100%;
+    height: 450px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Footer semplice */
+footer {
+    text-align: center;
+    padding: 40px 0;
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* --- CORREZIONE RESPONSIVE --- */
+
+@media (max-width: 768px) {
+    /* 1. Sistemiamo la Topbar (Header) */
+    .topbar {
+        height: auto;           /* Toglie l'altezza fissa di 100px/130px */
+        flex-direction: column; /* Mette logo sopra e menu sotto */
+        padding: 15px;
+        gap: 10px;
+    }
+
+    /* 2. Sistemiamo il Logo (testo troppo grande nello screen) */
+    .logo {
+        font-size: 20px;        /* Riduce la scritta del logo */
+        justify-content: center;
+    }
+
+    /* 3. Sistemiamo il Menu */
+    nav ul {
+        display: flex;
+        flex-direction: row;    /* Mantiene i link affiancati */
+        justify-content: center;
+        gap: 15px;
+        padding: 0;
+    }
+
+    nav a {
+        font-size: 16px;        /* Riduce la dimensione dei link */
+        margin-left: 0;         /* Toglie il margine eccessivo */
+    }
+
+    /* 4. Sistemiamo i Testi e il Contenitore */
+    .container {
+        margin: 20px auto;
+        padding: 0 15px;        /* Impedisce al testo di toccare i bordi */
+    }
+
+    h1 {
+        font-size: 28px;        /* Riduce il titolo principale */
+        line-height: 1.2;
+    }
+
+    .container > p {
+        font-size: 16px;        /* Riduce il testo descrittivo */
+    }
+
+    /* 5. Sistemiamo le Card (Contatti/Progetti) */
+    .card, .contatto-card {
+        flex-direction: column; /* Se c'erano immagini di lato, vanno sopra */
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    .photo {
+        width: 100%;            /* La foto occupa tutta la larghezza */
+        height: auto;
+        aspect-ratio: 16/9;
+    }
+}
+
+/* Per schermi ancora più piccoli (es. telefoni vecchi) */
+@media (max-width: 400px) {
+    nav a {
+        font-size: 14px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+}
