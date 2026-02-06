@@ -33,22 +33,29 @@ body {
 }
 
 .logo-circle {
-    width: 60px;  /* Aumentato un po' per rendere il logo leggibile */
+    width: 60px;
+    /* Aumentato un po' per rendere il logo leggibile */
     height: 60px;
     border-radius: 50%;
     background: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; /* Fondamentale: taglia l'immagine se esce dal cerchio */
-    border: 2px solid #fff; /* Un piccolo bordo per staccare dal blu */
-    flex-shrink: 0; /* Impedisce al cerchio di schiacciarsi */
+    overflow: hidden;
+    /* Fondamentale: taglia l'immagine se esce dal cerchio */
+    border: 2px solid #fff;
+    /* Un piccolo bordo per staccare dal blu */
+    flex-shrink: 0;
+    /* Impedisce al cerchio di schiacciarsi */
 }
+
 .logo-circle img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Mantiene le proporzioni del logo senza tagliarlo */
-    padding: 2px; /* Opzionale: dà un po' di respiro tra logo e bordo bianco */
+    object-fit: contain;
+    /* Mantiene le proporzioni del logo senza tagliarlo */
+    padding: 2px;
+    /* Opzionale: dà un po' di respiro tra logo e bordo bianco */
 }
 
 .logo {
@@ -56,9 +63,11 @@ body {
     align-items: center;
     gap: 15px;
     font-weight: 700;
-    text-transform: uppercase; /* Rende il nome dell'istituto più autorevole */
+    text-transform: uppercase;
+    /* Rende il nome dell'istituto più autorevole */
     letter-spacing: 1px;
 }
+
 nav a {
     color: #fff;
     text-decoration: none;
@@ -113,7 +122,7 @@ nav a.active {
 .photo {
     width: 350px;
     height: 250px;
-    background: #9c3b3b;
+    background: #e5e5e5;
     color: #fff;
     display: flex;
     align-items: center;
@@ -127,6 +136,16 @@ nav a.active {
     font-size: 12px;
 }
 
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* riempie tutto il box */
+    object-position: center;
+    /* centra l'immagine */
+    display: block;
+}
+
 
 br {
     display: block;
@@ -134,14 +153,16 @@ br {
 }
 
 .topbar {
-    height: 100px; /* Ridotto leggermente (130px era molto alto) */
+    height: 100px;
+    /* Ridotto leggermente (130px era molto alto) */
     background: #1f7db7;
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 40px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Aggiunge profondità */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Aggiunge profondità */
 }
 
 /* Rendi il titolo H1 più elegante */
@@ -176,13 +197,15 @@ h1 {
 }
 
 .contatto-card {
-    background: #ffffff; /* Bianco per contrasto */
+    background: #ffffff;
+    /* Bianco per contrasto */
     padding: 25px;
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     text-align: center;
     transition: transform 0.3s ease;
-    border-bottom: 4px solid #1f7db7; /* Richiamo al colore principale */
+    border-bottom: 4px solid #1f7db7;
+    /* Richiamo al colore principale */
 }
 
 .contatto-card:hover {
@@ -196,7 +219,8 @@ h1 {
     font-size: 18px;
 }
 
-.contatto-card p, .contatto-card a {
+.contatto-card p,
+.contatto-card a {
     color: #444;
     text-decoration: none;
     font-size: 18px;
@@ -219,7 +243,7 @@ h1 {
     height: 450px;
     border-radius: 20px;
     border: none;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Footer semplice */
@@ -231,7 +255,8 @@ footer {
 }
 
 /* Container principale */
-.cont, .cont-dettaglio {
+.cont,
+.cont-dettaglio {
     max-width: 800px;
     margin: 0 auto;
 }
@@ -242,7 +267,7 @@ footer {
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
 }
 
@@ -255,7 +280,7 @@ footer {
     background: white;
     padding: 40px;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .badge {
@@ -302,58 +327,71 @@ h1 {
 /* --- CORREZIONE RESPONSIVE --- */
 
 @media (max-width: 768px) {
+
     /* 1. Sistemiamo la Topbar (Header) */
     .topbar {
-        height: auto;           /* Toglie l'altezza fissa di 100px/130px */
-        flex-direction: column; /* Mette logo sopra e menu sotto */
+        height: auto;
+        /* Toglie l'altezza fissa di 100px/130px */
+        flex-direction: column;
+        /* Mette logo sopra e menu sotto */
         padding: 15px;
         gap: 10px;
     }
 
     /* 2. Sistemiamo il Logo (testo troppo grande nello screen) */
     .logo {
-        font-size: 20px;        /* Riduce la scritta del logo */
+        font-size: 20px;
+        /* Riduce la scritta del logo */
         justify-content: center;
     }
 
     /* 3. Sistemiamo il Menu */
     nav ul {
         display: flex;
-        flex-direction: row;    /* Mantiene i link affiancati */
+        flex-direction: row;
+        /* Mantiene i link affiancati */
         justify-content: center;
         gap: 15px;
         padding: 0;
     }
 
     nav a {
-        font-size: 16px;        /* Riduce la dimensione dei link */
-        margin-left: 0;         /* Toglie il margine eccessivo */
+        font-size: 16px;
+        /* Riduce la dimensione dei link */
+        margin-left: 0;
+        /* Toglie il margine eccessivo */
     }
 
     /* 4. Sistemiamo i Testi e il Contenitore */
     .container {
         margin: 20px auto;
-        padding: 0 15px;        /* Impedisce al testo di toccare i bordi */
+        padding: 0 15px;
+        /* Impedisce al testo di toccare i bordi */
     }
 
     h1 {
-        font-size: 28px;        /* Riduce il titolo principale */
+        font-size: 28px;
+        /* Riduce il titolo principale */
         line-height: 1.2;
     }
 
-    .container > p {
-        font-size: 16px;        /* Riduce il testo descrittivo */
+    .container>p {
+        font-size: 16px;
+        /* Riduce il testo descrittivo */
     }
 
     /* 5. Sistemiamo le Card (Contatti/Progetti) */
-    .card, .contatto-card {
-        flex-direction: column; /* Se c'erano immagini di lato, vanno sopra */
+    .card,
+    .contatto-card {
+        flex-direction: column;
+        /* Se c'erano immagini di lato, vanno sopra */
         padding: 20px;
         font-size: 16px;
     }
 
     .photo {
-        width: 100%;            /* La foto occupa tutta la larghezza */
+        width: 100%;
+        /* La foto occupa tutta la larghezza */
         height: auto;
         aspect-ratio: 16/9;
     }
@@ -364,6 +402,7 @@ h1 {
     nav a {
         font-size: 14px;
     }
+
     h1 {
         font-size: 24px;
     }
