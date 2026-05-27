@@ -2,9 +2,9 @@ import json
 from flask import Flask,render_template, abort
 
 app = Flask(__name__)
-def carica_dati():
+def carica_dati(jsonFile):
     try:
-        with open('competizioni.json', 'r', encoding='utf-8') as f:
+        with open(jsonFile, 'r', encoding='utf-8') as f:
             return json.load(f)
     except FileNotFoundError:
         return []
@@ -13,13 +13,14 @@ def carica_dati():
 def home():
     return render_template("home.html")
 
-@app.route("/progetti")
+@app.route('/progetti')
 def progetti():
-    return render_template("progetti.html")
+    sezioni_pagina = carica_dati("progetti.json")
+    return render_template('progetti.html', sezioni=sezioni_pagina)
 
 @app.route('/competizioni')
 def competizioni():
-    competizioni = carica_dati()
+    competizioni = carica_dati("competizioni.json")
     return render_template('competizioni.html', competizioni=competizioni)
 
 @app.route('/competizione/<int:comp_id>')

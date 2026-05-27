@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ gara.titolo }} - Reparto Informatica</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
     <header>
         <nav>
@@ -17,7 +19,7 @@
         <article class="card-dettaglio">
             <span class="badge">Competizione</span>
             <h1>{{ gara.titolo }}</h1>
-            
+
             <div class="info-meta">
                 <p><strong>📅 Data:</strong> {{ gara.data }}</p>
             </div>
@@ -33,4 +35,5 @@
         </article>
     </main>
 </body>
+
 </html>

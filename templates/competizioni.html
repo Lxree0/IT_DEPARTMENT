@@ -1,34 +1,21 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <title>Competizioni Informatica</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
-    <header class="topbar">
-        <div class="logo">
-            <div class="logo-circle">
-                <img src="{{ url_for('static', filename='images/logo_giorgi.png') }}" alt="Logo ITT Giorgi">
-            </div>
-            <span>ISTITUTO TECNICO TECNOLOGICO G. GIORGI</span>
-        </div>
-        <nav>
-            <a href="{{url_for('home')}}">Home</a>
-            <a href="{{url_for('progetti')}}">Progetti</a>
-            <a href="{{url_for('competizioni')}}"  class="active">Competizioni</a>
-            <a href="{{url_for('contatti')}}">Contatti</a>
-        </nav>
-    </header>
-    <h1>Reparto Informatica - Competizioni</h1>
-    <div class="cont">
+{% extends "base.html" %}
+
+{% block title %} Competizioni - Reparto Informatica {% endblock title%}
+
+{% block content %}
+<main class="container">
+    <section class="hero-section">
+        <h1>Reparto Informatica - Competizioni</h1>
+    </section>
+
+    <section class="cont">
         {% for gara in competizioni %}
-        <div class="comp_card">
+        <article class="comp_card">
             <h2>{{ gara.titolo }}</h2>
-            <p><strong>Data:</strong> {{ gara.data }}</p>
+            <p><strong>Data:</strong> <time datetime="{{ gara.data }}">{{ gara.data }}</time></p>
             <a href="{{ url_for('dettaglio', comp_id=gara.id) }}">Scopri di più</a>
-        </div>
+        </article>
         {% endfor %}
-    </div>
-</body>
-</html>
+    </section>
+</main>
+{% endblock content %}
